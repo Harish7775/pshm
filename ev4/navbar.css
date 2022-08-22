@@ -1,0 +1,27 @@
+#navbar{
+    width: 99%;
+    display: flex;
+    padding: 10px;
+    background-color: beige;
+    height: 70px;
+}
+#navbar a{
+    text-decoration: none;
+    width: 20%;
+    font-size: 40px;
+    color: brown;
+}
+#navbar a:hover{
+    color: black
+}
+#search_input{
+    width: 60%;
+    padding: 7px;
+    border-radius: 5px;
+    height: 30px;
+}
+#search_input{
+    font-size: 25px;
+    padding: 10px;
+    height: 20px;
+}

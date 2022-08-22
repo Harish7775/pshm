@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News App</title>
+  </head>
+  <link rel="stylesheet" href="./navbar.css" />
+  <style>
+    .container {
+      display: flex;
+
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+    #sidebar {
+      width: 20%;
+      height: 500px;
+      background-color: beige;
+    }
+    #sidebar a:hover {
+      color: white;
+    }
+    #results {
+      display: grid;
+      grid-template-columns: repeat(1fr, 1);
+      gap: 10px;
+    }
+    .news {
+      display: flex;
+      margin: 10px;
+      width: 1000px;
+
+      height: 150px;
+    }
+    .news img {
+      height: 100%;
+      width: 20%;
+    }
+    .news div {
+      margin-left: 10px;
+    }
+    #sidebar a {
+      margin: 15px 0;
+      display: block;
+      text-decoration: none;
+      font-size: 25px;
+      background-color: coral;
+      color: black;
+    }
+  </style>
+  <body>
+    <div id="navbar"></div>
+    <!-- Give Navbar with id "navbar"  -->
+    <!-- Navbar will have input with id search_input and a link to home page i.e. index.html -->
+    <div class="container">
+      <div id="sidebar">
+        <a id="in" href="">India</a>
+        <a id="ch" href="">China</a>
+        <a id="us" href="">U.S.A</a>
+        <a id="uk" href="">United Kingdom</a>
+      </div>
+      <div id="results"></div>
+    </div>
+    <!-- Sidebar will have id "sidebar"  -->
+    <!-- Give link to top headlines of countries in sidebar with id as their country codes 
+    india :- in
+    china :- ch
+    usa :- us
+    uk : uk
+    Newzeland :- nz -->
+
+    <!-- Append results inside div with id "results"  -->
+    <!-- News divs will have class "news"  -->
+  </body>
+</html>
+<script src="./index.js" type="module"></script>
