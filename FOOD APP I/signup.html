@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./styles/index.css"> -->
+  <style>
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    height: 600px;
+    
+}
+
+#li {
+    /* border: 2px solid; */
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    list-style: none;
+    padding: 5px;
+}
+#navbar {
+    padding: 10px 50px 10px 10px;
+    background-image: url("https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png");
+    width: 100%;
+    height:660px;
+    /* position: fixed; */
+
+}
+button{
+    /* border: 3px solid red;  */
+    padding: 5px 5px 5px 5px;
+}
+#form{
+    border: 3px solid red;
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    margin-top: 40px;
+}
+h1{
+    color: white;
+    text-align: center;
+    font-size:40px;
+}
+input{
+   width: 80%;
+   margin-left:40px;
+   height: 30px;
+   margin-top: 15px;
+}
+#submit{
+    margin-top: 15px;
+    width: 40%;
+    height: 30px;
+    margin-left: 32%;
+}
+  </style>
+
+</head>
+<body>
+    <div id="navbar">
+        <ul id="li">
+            <li>
+            <a href="index.html"><button>Home</button></a>
+        </li>
+            <li>
+               <a href="receipeofday.html"><button>Day Receipe</button></a>
+            </li>
+            <li>
+            <a href="random.html"><button>Random</button></a>
+          </li>
+           
+            <li>
+                <a href="signIn.html" id="disable"><button id="btn">Login</button></a>
+            </li>
+        </ul>
+        <div id="form">
+        <form >
+            <h1>Singup</h1>
+            <input type="text" placeholder="Enter Name" id="name"><br>
+            <input type="text"  id="email" placeholder="Enter Email id"><br>
+            <input type="password" id="password" placeholder="Enter Password"><br>
+            <button id="submit" onclick="save(event)">Submit</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
+<script src="./scripts/signup.js"></script>

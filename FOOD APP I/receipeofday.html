@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="./styles/index.css">
+</head>
+<body>
+    <div id="navbar"></div>
+    <h2>Receipe Of The Day</h2>
+    <div id="cont"></div>
+</body>
+</html>
+<script src="./scripts/receipeofday.js" type="module"></script>
+<script>
+        let id;
+    let main=async()=>{
+    let search = document.getElementById("search").value;
+    let data = await getData(search);
+    append(data)
+    receipeofday()
+    console.log(data)
+}
+ let getData=async(search)=>{
+    //let query = document.getElementById("query").value;
+    const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`;
+
+    let res = await fetch(url);
+    let data = await res.json();
+   return data.meals;
+}
+
+let append=(data)=>{
+  
+    let cont=document.getElementById("cont");
+    cont.innerHTML=""
+    data.forEach(function(e){
+    let img=document.createElement('img');
+    img.src=e.strMealThumb;
+    
+    let name=document.createElement("h2");
+    name.innerText=`StrMeal: ${e.strMeal}`
+
+    let idMeal=document.createElement('p');
+    idMeal.innerText=`idMeal: ${e.idMeal}`
+    let div=document.createElement('div');
+    div.append(img,name,idMeal);
+
+    cont.append(div)
+    })
+}
+
+let debouncing=(func, delay)=>{
+            if(id){
+                clearTimeout(id)
+            }
+           id= setTimeout(function(){
+                func();
+},delay)
+}
+
+
+</script>
